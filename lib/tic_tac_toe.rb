@@ -59,9 +59,6 @@ def current_player(board)
 end
 
 def won?(board)
-    if board.all?{|i| i == " "}
-        false
-    end
 
     WIN_COMBINATIONS.each do |condi|
         winning_combi = []
