@@ -66,12 +66,12 @@ def won?(board)
     WIN_COMBINATIONS.each do |condi|
         winning_combi = []
         condi.each{|i| winning_combi << board[i]}
-
+        
         if winning_combi.all?{|i| i == "X"}
-            true
+            return true
             break
         elsif winning_combi.all?{|i| i == "O"}
-            true
+            return true
             break
         elsif winning_combi.all?{|i| i != "X" || i != "O"} && full?(board)
             false
