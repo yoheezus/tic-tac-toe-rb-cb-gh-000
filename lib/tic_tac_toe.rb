@@ -59,21 +59,22 @@ def current_player(board)
 end
 
 def won?(board)
-
+    won = false
     WIN_COMBINATIONS.each do |condi|
         winning_combi = []
         condi.each{|i| winning_combi << board[i]}
 
         if winning_combi.all?{|i| i == "X"}
-            return true
+            won = true
         elsif winning_combi.all?{|i| i == "O"}
-            return true
-        end
-        unless winning_combi.all?{|i| i != "X" || i != "O"} && full?(board)
-            return false
+            won = true
         end
     end
-    return false
+    if won == false && full?(board)
+        return false
+    else
+        return true
+    end
 end
 
 def full?(board)
