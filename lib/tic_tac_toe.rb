@@ -87,9 +87,9 @@ end
 
 def draw?(board)
     stripped_board = board.select{|i| i != " "}
-    if stripped_board.length < 9
+    if won?(board)
         false
-    elsif won?(board)
+    if stripped_board.length < 9
         false
     elsif won?(board) == false && full?(board)
         true
