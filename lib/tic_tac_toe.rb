@@ -97,6 +97,15 @@ def draw?(board)
     end
 end
 
+def over?(board)
+    if won?(board)
+        true
+    elsif draw?(board)
+        true
+    else
+        false
+    end
+end
 #WIN_COMBINATIONS
 WIN_COMBINATIONS = [
     [0, 1, 2],
