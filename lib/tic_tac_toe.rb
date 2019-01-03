@@ -66,7 +66,7 @@ def won?(board)
     WIN_COMBINATIONS.each do |condi|
         winning_combi = []
         condi.each{|i| winning_combi << board[i]}
-        
+
         if winning_combi.all?{|i| i == "X"}
             return true
             break
