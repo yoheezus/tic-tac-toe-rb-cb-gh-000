@@ -98,14 +98,16 @@ def draw?(board)
 end
 
 def over?(board)
-    if won?(board)
+    won = won?(board)
+    if won
         true
     elsif draw?(board)
         true
-    else
+    elsif won == false && full?(board) == false
         false
     end
 end
+
 #WIN_COMBINATIONS
 WIN_COMBINATIONS = [
     [0, 1, 2],
