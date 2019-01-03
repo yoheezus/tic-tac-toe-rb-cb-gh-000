@@ -72,7 +72,7 @@ def won?(board)
             return false
         end
     end
-    return nil
+    return false
 end
 
 def full?(board)
