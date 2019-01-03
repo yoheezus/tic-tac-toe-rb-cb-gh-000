@@ -104,7 +104,8 @@ def over?(board)
         true
     elsif draw
         true
-    elsif won == false && full?(board) == false
+    end
+    unless won && full?(board)
         false
     end
 end
