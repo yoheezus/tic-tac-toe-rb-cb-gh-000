@@ -69,9 +69,9 @@ def won?(board)
             winning_combi << board[i]
         end
         if winning_combi.all?{|i| i == "X"}
-            winning_combi
+            true
         elsif winning_combi.all?{|i| i == "O"}
-            winning_combi
+            true
         elsif winning_combi.all?{|i| i != "X" || i != "O"} && full?(board)
             false
         end
