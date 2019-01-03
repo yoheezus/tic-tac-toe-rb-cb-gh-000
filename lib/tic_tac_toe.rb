@@ -53,14 +53,14 @@ end
 def current_player(board)
     if turn_count(board).even?
         "X"
-    else 
+    else
         "O"
     end
 end
 
 def won?(board)
     if board.all?{|i| i == " "}
-        return false
+        false
     end
 
     WIN_COMBINATIONS.each do |condi|
