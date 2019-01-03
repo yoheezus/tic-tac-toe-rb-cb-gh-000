@@ -76,7 +76,7 @@ def won?(board)
 end
 
 def full?(board)
-    if board.all?{|i| i == "X" || i == "O"}
+    if board.all?{|i| i != " "}
         true
     elsif board.any?{|i| i == " "}
         false
