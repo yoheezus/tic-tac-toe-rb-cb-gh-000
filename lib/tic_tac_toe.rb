@@ -84,8 +84,6 @@ def full?(board)
         true
     elsif board.any?{|i| i == " "}
         false
-    else
-        false
     end
 end
 
