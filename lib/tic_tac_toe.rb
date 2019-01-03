@@ -99,9 +99,10 @@ end
 
 def over?(board)
     won = won?(board)
+    draw = draw?(board)
     if won
         true
-    elsif draw?(board)
+    elsif draw
         true
     elsif won == false && full?(board) == false
         false
