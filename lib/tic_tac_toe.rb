@@ -69,13 +69,10 @@ def won?(board)
 
         if winning_combi.all?{|i| i == "X"}
             return true
-            break
         elsif winning_combi.all?{|i| i == "O"}
             return true
-            break
         elsif winning_combi.all?{|i| i != "X" || i != "O"} && full?(board)
-            false
-            break
+            return false
         end
     end
 end
