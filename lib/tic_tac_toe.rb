@@ -85,6 +85,17 @@ def full?(board)
     end
 end
 
+def draw?(board)
+    stripped_board = board.select{|i| i != " "}
+    if stripped_board.length < 9
+        false
+    elsif won?(board)
+        false
+    elsif won?(board) == false && full?(board)
+        true
+    end
+end
+
 #WIN_COMBINATIONS
 WIN_COMBINATIONS = [
     [0, 1, 2],
